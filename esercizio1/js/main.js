@@ -10,14 +10,20 @@ console.log(promptMail);
 /* - creare un array con una lista di mail ammesse. */
 const mailArray = ['alexchihaia84@gmail.com', 'pippo.pluto@topolino.com', 'indice.array@javascript.com']
 
+
+let canAccess = false;
+
 /* - creare una condizione per la quale solo le mail all'interno dell'array possano accedere */
 for (let counter = 0; counter < mailArray.length; counter++) {
     if (mailArray[counter] === promptMail) {
-        console.log('E-mail valida. Accesso consentito.');
+        canAccess = true;
     }
-    else if ((mailArray[counter - 1] !== promptMail) && (mailArray[counter + 1] !== promptMail) && (mailArray[counter - 2] !== promptMail)) {
-        console.log('E-mail non valida. Accesso negato.');
-    }
+}
+if (canAccess === true) {
+    console.log('E-mail valida. Accesso consentito.');
+}
+else {
+    console.log('E-mail non valida. Accesso negato.');
 }
 
 
