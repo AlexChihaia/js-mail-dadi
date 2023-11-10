@@ -17,6 +17,7 @@ let canAccess = false;
 for (let counter = 0; counter < mailArray.length; counter++) {
     if (mailArray[counter] === promptMail) {
         canAccess = true;
+        break;
     }
 }
 if (canAccess === true) {
